@@ -61,6 +61,7 @@ void loop() {
         // continue;
       }
       arr[i]=cahaya;
+      index[i]=arr[i];
       //if (i==1) cahaya=250;//2
       //if (i==4) cahaya=10;//5
       //if (i==3) cahaya=200;//4
@@ -76,9 +77,6 @@ void loop() {
       lcd.clear();
       lcd.blink();
       i++;
-  }
-  for (int i=1; i<=5; i++) {//MEMASUKAN DATA KE ARRAY BARU
-    index[i]=arr[i];
   }
   KickSort<uint16_t>::quickSort(arr, samples);//SORT ARRAY BARU
   Serial.print("Sorted Array: ");
